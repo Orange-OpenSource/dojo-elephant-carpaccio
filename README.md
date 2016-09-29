@@ -8,5 +8,13 @@ The exercise was invented by Alistair Cockburn. We’ve co-facilitated it a bunc
 # Build
 ```./mvnw clean install```
 
+# Useful dependencies
+
+ -[Lombok](https://projectlombok.org/), for value object made easy
+ 
+ -[Zohhak - JUnit parameterized made simple](https://github.com/piotrturski/zohhak)
+ 
+ -[Fest assert - Fluent Assertions](https://github.com/alexruiz/fest-assert-1.x)
+
 # License
 Copyright (C) 2016 Orange - The MIT License
