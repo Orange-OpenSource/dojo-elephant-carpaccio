@@ -15,6 +15,9 @@ The exercise was invented by Alistair Cockburn. We’ve co-facilitated it a bunc
  -[Zohhak - JUnit parameterized made simple](https://github.com/piotrturski/zohhak)
  
  -[Fest assert - Fluent Assertions](https://github.com/alexruiz/fest-assert-1.x)
+ 
+ 
+You can find examples demonstrating how to use Zohhak and Lombok @Value under the test directory.
 
 # License
 Copyright (C) 2016 Orange - The MIT License
