@@ -7,4 +7,6 @@
 
 3. As a PO, I want the Terminal to handle invalid 'number of items' value and to display it
 
+4. As a PO, I want the Terminal to read the 'number of items', then the 'price per item', and to display it
+
 
