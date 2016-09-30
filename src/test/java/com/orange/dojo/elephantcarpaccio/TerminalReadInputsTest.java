@@ -2,8 +2,10 @@ package com.orange.dojo.elephantcarpaccio;
 
 import org.junit.Test;
 
+import java.util.Optional;
 import java.util.OptionalDouble;
 
+import static com.orange.dojo.elephantcarpaccio.Terminal.STATE_CODE_INPUT_STRING;
 import static org.fest.assertions.Assertions.assertThat;
 
 public class TerminalReadInputsTest {
@@ -12,14 +14,15 @@ public class TerminalReadInputsTest {
   public void the_terminal_reads_the_number_of_items_and_display_it() {
     // given
     Terminal terminal = new Terminal();
-    int testModeExpectedInputValue = 3;
+    int expectedNumberOfItems = 3;
 
     // when
     NumberOfItems numberOfItems = terminal.readNumberOfItems(
-            new InputReader(Terminal.NUMBER_OF_ITEMS_INPUT_STRING, OptionalDouble.of(testModeExpectedInputValue)));
+            new InputNumberReader(Terminal.NUMBER_OF_ITEMS_INPUT_STRING,
+                    OptionalDouble.of(expectedNumberOfItems)));
 
     // then
-    assertThat(numberOfItems).isEqualTo(new NumberOfItems(testModeExpectedInputValue));
+    assertThat(numberOfItems).isEqualTo(new NumberOfItems(expectedNumberOfItems));
   }
 
   @Test
@@ -31,12 +34,28 @@ public class TerminalReadInputsTest {
 
     // when
     NumberOfItems numberOfItems = terminal.readNumberOfItems(
-            new InputReader(Terminal.NUMBER_OF_ITEMS_INPUT_STRING, OptionalDouble.of(expectedNumberOfItems)));
+            new InputNumberReader(Terminal.NUMBER_OF_ITEMS_INPUT_STRING,
+                    OptionalDouble.of(expectedNumberOfItems)));
     PricePerItem pricePerItem = terminal.readPricePerItem(
-            new InputReader(Terminal.PRICE_PER_ITEM_INPUT_STRING, OptionalDouble.of(expectedPricePerItem)));
+            new InputNumberReader(Terminal.PRICE_PER_ITEM_INPUT_STRING,
+                    OptionalDouble.of(expectedPricePerItem)));
 
     // then
     assertThat(numberOfItems).isEqualTo(new NumberOfItems(expectedNumberOfItems));
     assertThat(pricePerItem).isEqualTo(new PricePerItem(expectedPricePerItem));
+  }
+
+  @Test
+  public void the_terminal_reads_the_state_2_letters_code_and_display_it() {
+    // given
+    Terminal terminal = new Terminal();
+    String expectedStateCode = "UT";
+
+    // when
+    StateCode stateCode = terminal.readStateCode(
+            new StringInputReader(STATE_CODE_INPUT_STRING, Optional.of(expectedStateCode)));
+
+    // then
+    assertThat(stateCode).isEqualTo(new StateCode(expectedStateCode));
   }
 }

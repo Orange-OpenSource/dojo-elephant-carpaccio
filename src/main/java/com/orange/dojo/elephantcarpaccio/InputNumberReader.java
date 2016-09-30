@@ -4,15 +4,15 @@ import java.util.InputMismatchException;
 import java.util.OptionalDouble;
 import java.util.Scanner;
 
-class InputReader {
+class InputNumberReader {
   private final String inputMessage;
   private final OptionalDouble testModeExpectedInputValue;
 
-  InputReader(String inputMessage) {
+  InputNumberReader(String inputMessage) {
     this(inputMessage, OptionalDouble.empty());
   }
 
-  InputReader(String inputMessage, OptionalDouble testModeExpectedInputValue) {
+  InputNumberReader(String inputMessage, OptionalDouble testModeExpectedInputValue) {
     this.inputMessage = inputMessage;
     this.testModeExpectedInputValue = testModeExpectedInputValue;
   }

@@ -10,3 +10,5 @@
 4. As a PO, I want the Terminal to read the 'number of items', then the 'price per item', and to display it
 
 5. As a PO, I want the Terminal to compute the total price based on 'number of items', the 'price per item', and to display it
+
+6. As a PO, I want the Terminal to read also the '2-letter state code' and to display it
