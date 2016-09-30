@@ -1,6 +1,9 @@
 package com.orange.dojo.elephantcarpaccio;
 
+import com.googlecode.zohhak.api.TestWith;
+import com.googlecode.zohhak.api.runners.ZohhakRunner;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 
 import java.util.Optional;
 import java.util.OptionalDouble;
@@ -8,6 +11,7 @@ import java.util.OptionalDouble;
 import static com.orange.dojo.elephantcarpaccio.Terminal.STATE_CODE_INPUT_STRING;
 import static org.fest.assertions.Assertions.assertThat;
 
+@RunWith(ZohhakRunner.class)
 public class TerminalReadInputsTest {
 
   @Test
@@ -59,25 +63,15 @@ public class TerminalReadInputsTest {
     assertThat(stateCode).isEqualTo(new StateCode(expectedStateCode));
   }
 
-  @Test
-  // FIXME IMPROVE WITH ZOHHAK
-  public void the_terminal_supports_UT_NV_TX_AL_CA_2_letters_state_code() {
+  @TestWith({"UT", "NV", "TX", "AL", "CA"})
+  public void the_terminal_supports_UT_NV_TX_AL_CA_2_letters_state_code(String stateCode) {
     // given
-    StateCode stateCodeUT = new StateCode("UT");
-    StateCode stateCodeNV = new StateCode("NV");
-    StateCode stateCodeTX = new StateCode("TX");
-    StateCode stateCodeAL = new StateCode("AL");
-    StateCode stateCodeCA = new StateCode("CA");
-
+    StateCode stateCodeSupported = new StateCode(stateCode);
     StateCode stateCodeOther = new StateCode("XY");
 
     // when
     // then
-    assertThat(stateCodeUT.isSupported()).isTrue();
-    assertThat(stateCodeNV.isSupported()).isTrue();
-    assertThat(stateCodeTX.isSupported()).isTrue();
-    assertThat(stateCodeAL.isSupported()).isTrue();
-    assertThat(stateCodeCA.isSupported()).isTrue();
+    assertThat(stateCodeSupported.isSupported()).isTrue();
     assertThat(stateCodeOther.isSupported()).isFalse();
   }
 }

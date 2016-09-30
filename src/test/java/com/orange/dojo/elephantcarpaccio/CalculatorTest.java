@@ -1,8 +1,14 @@
 package com.orange.dojo.elephantcarpaccio;
 
+import com.googlecode.zohhak.api.Coercion;
+import com.googlecode.zohhak.api.TestWith;
+import com.googlecode.zohhak.api.runners.ZohhakRunner;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+
 import static org.fest.assertions.Assertions.assertThat;
 
+@RunWith(ZohhakRunner.class)
 public class CalculatorTest {
 
   NumberOfItems numberOfItems = new NumberOfItems(2);
@@ -19,17 +25,21 @@ public class CalculatorTest {
     assertThat(rawPrice).isEqualTo(new RawPrice(9));
   }
 
-  @Test
-  // FIXME IMPROVE WITH ZOHHAK
-  public void the_total_price_includes_the_state_tax() {
+  @Coercion
+  public float buildTotalPriceFrom(String stringTotalPrice) {
+    return Float.parseFloat(stringTotalPrice);
+  }
+
+  @TestWith({"UT, 9.616501", "NV, 9.72", "TX, 9.5625", "AL, 9.36", "CA, 9.7425"})
+  public void the_total_price_includes_the_state_tax(String stateLetters, float expectedTotalPrice) {
     // given
-    StateCode ut = new StateCode("UT");
+    StateCode ut = new StateCode(stateLetters);
     RawPrice rawPrice = calculator.computeRawPrice(numberOfItems, pricePerItem);
 
     // when
     TotalPrice totalPrice = calculator.computeTotalPrice(rawPrice, ut);
 
     // then
-    assertThat(totalPrice).isEqualTo(new TotalPrice(9.616501f));
+    assertThat(totalPrice).isEqualTo(new TotalPrice(expectedTotalPrice));
   }
 }
