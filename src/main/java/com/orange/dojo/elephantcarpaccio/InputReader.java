@@ -1,11 +1,25 @@
 package com.orange.dojo.elephantcarpaccio;
 
-class InputReader {
+import lombok.Value;
 
-  public InputReader(String inputMessage, int testModeExpectedInputValue) {
+import java.util.OptionalInt;
+
+class InputReader {
+  private final String inputMessage;
+  private final OptionalInt testModeExpectedInputValue;
+
+  InputReader(String inputMessage) {
+    this(inputMessage, OptionalInt.empty());
   }
 
-  public NumberOfItems read() {
-    return null;
+  InputReader(String inputMessage, OptionalInt testModeExpectedInputValue) {
+    this.inputMessage = inputMessage;
+    this.testModeExpectedInputValue = testModeExpectedInputValue;
+  }
+
+  NumberOfItems read() {
+    return testModeExpectedInputValue.isPresent() ?
+            new NumberOfItems(testModeExpectedInputValue.getAsInt()) :
+            null;
   }
 }

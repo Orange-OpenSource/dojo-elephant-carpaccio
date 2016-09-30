@@ -1,6 +1,9 @@
 package com.orange.dojo.elephantcarpaccio;
 
 import org.junit.Test;
+
+import java.util.OptionalInt;
+
 import static org.fest.assertions.Assertions.assertThat;
 
 public class TerminalReadInputsTest {
@@ -13,9 +16,9 @@ public class TerminalReadInputsTest {
 
     // when
     NumberOfItems numberOfItems = terminal.readNumberOfItems(
-            new InputReader("Number of Items", testModeExpectedInputValue));
+            new InputReader("Number of Items", OptionalInt.of(testModeExpectedInputValue)));
 
     // then
-    assertThat(numberOfItems).isEqualTo(testModeExpectedInputValue);
+    assertThat(numberOfItems).isEqualTo(new NumberOfItems(testModeExpectedInputValue));
   }
 }
