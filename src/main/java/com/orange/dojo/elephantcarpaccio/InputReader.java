@@ -1,5 +1,6 @@
 package com.orange.dojo.elephantcarpaccio;
 
+import java.util.InputMismatchException;
 import java.util.OptionalDouble;
 import java.util.Scanner;
 
@@ -23,9 +24,15 @@ class InputReader {
   }
 
   private double readFromConsole(String inputMessage) {
-    System.out.println("Please enter the " + inputMessage + ":");
-    Scanner scanner = new Scanner(System.in);
-    double input =  scanner.nextDouble();
-    return input;
+    do {
+      try {
+        System.out.println("Please enter the " + inputMessage + ":");
+        Scanner scanner = new Scanner(System.in);
+        double input = scanner.nextDouble();
+        return input;
+      } catch (InputMismatchException e) {
+        System.out.println("WARN: You entered an invalid value");
+      }
+    } while(true);
   }
 }
