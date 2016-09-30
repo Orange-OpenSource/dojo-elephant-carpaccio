@@ -14,3 +14,5 @@
 6. As a PO, I want the Terminal to read also the '2-letter state code' and to display it
 
 7. As a PO, I want the Terminal to support the UTAH '2-letter state code' only
+
+8. As a PO, I want the total price to include the UTAH tax

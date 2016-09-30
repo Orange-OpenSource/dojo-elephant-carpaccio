@@ -11,10 +11,18 @@ class StateCode {
   private static final String[] SUPPORTED_STATES = {
     "UT"
   };
+  private static final float[] STATES_TAXES = {
+    0.0685f
+  };
 
   String val;
 
-  public boolean isSupported() {
+  boolean isSupported() {
     return Arrays.asList(SUPPORTED_STATES).contains(val);
+  }
+
+  float tax() {
+    int stateIndex = Arrays.asList(SUPPORTED_STATES).indexOf(val);
+    return STATES_TAXES[stateIndex];
   }
 }
