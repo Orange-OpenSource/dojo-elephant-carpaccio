@@ -1,2 +1,3 @@
-1. As a PO, I want a starter app displaying "Hello World"
+1. As a PO, I want a Terminal displaying 'Hello World'
+
 

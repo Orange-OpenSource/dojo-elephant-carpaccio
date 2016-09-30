@@ -1,6 +1,6 @@
 package com.orange.dojo.elephantcarpaccio;
 
-class Calculator {
+class Terminal {
 
   void run() {
     System.out.println("Hello World");
