@@ -30,6 +30,10 @@ class Terminal {
   }
 
   public StateCode readStateCode(StringInputReader stringInputReader) {
-    return new StateCode(stringInputReader.read());
+    StateCode stateCode;
+    do {
+      stateCode = new StateCode(stringInputReader.read());
+    } while(!stateCode.isSupported());
+    return stateCode;
   }
 }

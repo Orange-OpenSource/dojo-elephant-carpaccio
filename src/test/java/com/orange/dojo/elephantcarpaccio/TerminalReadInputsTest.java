@@ -58,4 +58,16 @@ public class TerminalReadInputsTest {
     // then
     assertThat(stateCode).isEqualTo(new StateCode(expectedStateCode));
   }
+
+  @Test
+  public void the_terminal_only_supports_UT_2_letters_state_code() {
+    // given
+    StateCode stateCodeUTAH = new StateCode("UT");
+    StateCode stateCodeOther = new StateCode("XY");
+
+    // when
+    // then
+    assertThat(stateCodeUTAH.isSupported()).isTrue();
+    assertThat(stateCodeOther.isSupported()).isFalse();
+  }
 }
