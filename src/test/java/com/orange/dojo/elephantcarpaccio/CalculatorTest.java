@@ -20,13 +20,14 @@ public class CalculatorTest {
   }
 
   @Test
+  // FIXME IMPROVE WITH ZOHHAK
   public void the_total_price_includes_the_state_tax() {
     // given
-    StateCode stateCode = new StateCode("UT");
+    StateCode ut = new StateCode("UT");
     RawPrice rawPrice = calculator.computeRawPrice(numberOfItems, pricePerItem);
 
     // when
-    TotalPrice totalPrice = calculator.computeTotalPrice(rawPrice, stateCode);
+    TotalPrice totalPrice = calculator.computeTotalPrice(rawPrice, ut);
 
     // then
     assertThat(totalPrice).isEqualTo(new TotalPrice(9.616501f));

@@ -60,14 +60,24 @@ public class TerminalReadInputsTest {
   }
 
   @Test
-  public void the_terminal_only_supports_UT_2_letters_state_code() {
+  // FIXME IMPROVE WITH ZOHHAK
+  public void the_terminal_supports_UT_NV_TX_AL_CA_2_letters_state_code() {
     // given
-    StateCode stateCodeUTAH = new StateCode("UT");
+    StateCode stateCodeUT = new StateCode("UT");
+    StateCode stateCodeNV = new StateCode("NV");
+    StateCode stateCodeTX = new StateCode("TX");
+    StateCode stateCodeAL = new StateCode("AL");
+    StateCode stateCodeCA = new StateCode("CA");
+
     StateCode stateCodeOther = new StateCode("XY");
 
     // when
     // then
-    assertThat(stateCodeUTAH.isSupported()).isTrue();
+    assertThat(stateCodeUT.isSupported()).isTrue();
+    assertThat(stateCodeNV.isSupported()).isTrue();
+    assertThat(stateCodeTX.isSupported()).isTrue();
+    assertThat(stateCodeAL.isSupported()).isTrue();
+    assertThat(stateCodeCA.isSupported()).isTrue();
     assertThat(stateCodeOther.isSupported()).isFalse();
   }
 }

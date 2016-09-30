@@ -9,10 +9,10 @@ import java.util.Arrays;
 @Accessors(fluent = true)
 class StateCode {
   private static final String[] SUPPORTED_STATES = {
-    "UT"
+    "UT", "NV", "TX", "AL", "CA"
   };
   private static final float[] STATES_TAXES = {
-    0.0685f
+    0.0685f, 0.08f, 0.0625f, 0.04f, 0.0825f
   };
 
   String val;

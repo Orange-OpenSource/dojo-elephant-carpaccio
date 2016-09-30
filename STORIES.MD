@@ -16,3 +16,7 @@
 7. As a PO, I want the Terminal to support the UTAH '2-letter state code' only
 
 8. As a PO, I want the total price to include the UTAH tax
+
+9. As a PO, I want to support all states: UT, NV, TX, AL, CA
+ 
+10. As a PO, I want to reduce the technical debt to ensure taxes are correctly computed
