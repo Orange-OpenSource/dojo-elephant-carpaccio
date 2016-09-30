@@ -1,25 +1,31 @@
 package com.orange.dojo.elephantcarpaccio;
 
-import lombok.Value;
-
-import java.util.OptionalInt;
+import java.util.OptionalDouble;
+import java.util.Scanner;
 
 class InputReader {
   private final String inputMessage;
-  private final OptionalInt testModeExpectedInputValue;
+  private final OptionalDouble testModeExpectedInputValue;
 
   InputReader(String inputMessage) {
-    this(inputMessage, OptionalInt.empty());
+    this(inputMessage, OptionalDouble.empty());
   }
 
-  InputReader(String inputMessage, OptionalInt testModeExpectedInputValue) {
+  InputReader(String inputMessage, OptionalDouble testModeExpectedInputValue) {
     this.inputMessage = inputMessage;
     this.testModeExpectedInputValue = testModeExpectedInputValue;
   }
 
-  NumberOfItems read() {
+  double read() {
     return testModeExpectedInputValue.isPresent() ?
-            new NumberOfItems(testModeExpectedInputValue.getAsInt()) :
-            null;
+            testModeExpectedInputValue.getAsDouble() :
+            readFromConsole(inputMessage);
+  }
+
+  private double readFromConsole(String inputMessage) {
+    System.out.println("Please enter the " + inputMessage + ":");
+    Scanner scanner = new Scanner(System.in);
+    double input =  scanner.nextDouble();
+    return input;
   }
 }

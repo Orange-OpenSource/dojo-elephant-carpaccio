@@ -2,7 +2,7 @@ package com.orange.dojo.elephantcarpaccio;
 
 import org.junit.Test;
 
-import java.util.OptionalInt;
+import java.util.OptionalDouble;
 
 import static org.fest.assertions.Assertions.assertThat;
 
@@ -16,7 +16,7 @@ public class TerminalReadInputsTest {
 
     // when
     NumberOfItems numberOfItems = terminal.readNumberOfItems(
-            new InputReader("Number of Items", OptionalInt.of(testModeExpectedInputValue)));
+            new InputReader("Number of Items", OptionalDouble.of(testModeExpectedInputValue)));
 
     // then
     assertThat(numberOfItems).isEqualTo(new NumberOfItems(testModeExpectedInputValue));
