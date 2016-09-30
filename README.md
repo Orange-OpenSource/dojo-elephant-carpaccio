@@ -5,6 +5,8 @@ The Elephant Carpaccio exercise is a great way for software people to practice &
 
 The exercise was invented by Alistair Cockburn. See [here](http://alistair.cockburn.us/Elephant+Carpaccio+Exercise).
 
+Henrik Kniberg [description](https://docs.google.com/document/d/1TCuuu-8Mm14oxsOnlk8DqfZAA1cvtYu9WGv67Yj_sSk/pub) and [handout](https://docs.google.com/document/d/1Ls6pTmhY_LV8LwFiboUXoFXenXZl0qVZWPZ8J4uoqpI/edit).
+
 # Build
 ```./mvnw clean install```
 
