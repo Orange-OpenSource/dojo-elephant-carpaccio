@@ -1,6 +1,5 @@
 package com.orange.dojo.elephantcarpaccio;
 
-import com.sun.xml.internal.xsom.impl.Ref;
 import org.junit.Test;
 
 import java.util.OptionalDouble;

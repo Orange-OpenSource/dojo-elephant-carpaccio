@@ -10,6 +10,11 @@ class Terminal {
     PricePerItem pricePerItem = readPricePerItem(new InputReader(PRICE_PER_ITEM_INPUT_STRING));
     System.out.println(NUMBER_OF_ITEMS_INPUT_STRING + " is " + numberOfItems.val());
     System.out.println(PRICE_PER_ITEM_INPUT_STRING + " is " + pricePerItem.val());
+
+    Calculator calculator = new Calculator();
+    RawPrice rawPrice = calculator.computeRawPrice(numberOfItems, pricePerItem);
+
+    System.out.println("Total price is " + rawPrice.val());
   }
 
   NumberOfItems readNumberOfItems(InputReader inputReader) {
