@@ -22,3 +22,5 @@
 10. As a PO, I want to reduce the technical debt to ensure taxes are correctly computed
 
 11. As a PO, I want to be able to apply a discount on the RAW price
+
+12. As a PO, I want to be able to apply a discount which depends of the value of the raw price

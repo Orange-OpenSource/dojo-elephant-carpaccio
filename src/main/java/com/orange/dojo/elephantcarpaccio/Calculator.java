@@ -1,9 +1,7 @@
 package com.orange.dojo.elephantcarpaccio;
 
 class Calculator {
-
-  /** Raw Price Discount in percent / 100, ie 10% == 0.1 */
-  private static float DISCOUNT = 0.1f;
+  private final Discounts discounts = new Discounts();
 
   RawPrice computeRawPrice(NumberOfItems numberOfItems, PricePerItem pricePerItem) {
     return new RawPrice(numberOfItems.val() * pricePerItem.val());
@@ -14,8 +12,6 @@ class Calculator {
   }
 
   public DiscountPrice computePriceWithDiscount(RawPrice rawPrice) {
-    float rawPriceVal = rawPrice.price();
-    float discountPrice = rawPriceVal * (1 - DISCOUNT);
-    return new DiscountPrice(discountPrice);
+    return discounts.discount(rawPrice);
   }
 }
