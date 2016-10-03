@@ -42,4 +42,17 @@ public class CalculatorTest {
     // then
     assertThat(totalPrice).isEqualTo(new TotalPrice(expectedTotalPrice));
   }
+
+  @Test
+  public void we_can_apply_a_discount_on_the_raw_price() {
+    // given
+    RawPrice rawPrice = new RawPrice(100);
+    Calculator calculator = new Calculator();
+
+    // when
+    DiscountPrice discountPrice = calculator.computePriceWithDiscount(rawPrice);
+
+    // then
+    assertThat(discountPrice).isEqualTo(new DiscountPrice(90));
+  }
 }

@@ -18,9 +18,11 @@ class Terminal {
     Calculator calculator = new Calculator();
     RawPrice rawPrice = calculator.computeRawPrice(numberOfItems, pricePerItem);
 
-    TotalPrice totalPrice = calculator.computeTotalPrice(rawPrice, stateCode);
+    DiscountPrice discountPrice = calculator.computePriceWithDiscount(rawPrice);
 
-    System.out.println("Total price is " + totalPrice.val());
+    TotalPrice totalPrice = calculator.computeTotalPrice(discountPrice, stateCode);
+
+    System.out.println("Total price is " + totalPrice.price());
   }
 
   NumberOfItems readNumberOfItems(InputNumberReader inputNumberReader) {

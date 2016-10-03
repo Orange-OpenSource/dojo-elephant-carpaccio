@@ -5,6 +5,6 @@ import lombok.experimental.Accessors;
 
 @Value
 @Accessors(fluent = true)
-class RawPrice implements Price {
+class DiscountPrice implements Price {
   float price;
 }
