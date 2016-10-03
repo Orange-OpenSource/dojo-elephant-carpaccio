@@ -24,3 +24,5 @@
 11. As a PO, I want to be able to apply a discount on the RAW price
 
 12. As a PO, I want to be able to apply a discount which depends of the value of the raw price
+
+13. As a PO, I want the discount value to appear on the console

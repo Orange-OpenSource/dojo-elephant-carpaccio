@@ -22,6 +22,8 @@ class Terminal {
 
     TotalPrice totalPrice = calculator.computeTotalPrice(discountPrice, stateCode);
 
+    System.out.println();
+    System.out.println("Discount: " + (rawPrice.price() - discountPrice.price()));
     System.out.println("Total price is " + totalPrice.price());
   }
 
