@@ -1,0 +1,4 @@
+1. Ajouter les classes d'exemples pour la lecture à la console
+2. Renommer Application en Demo et ajouter un exemple d'utilisation des classes de lecture de la console ("ton nom et ton âge")
+3. Déplacer  les exemples Lombok et Zoohak dans un package com.orange.dojo.examples (sous src/test/java)
+4. Mettre en place des tests pour valider l'environnement TU (Fest Assert failed) + Demo
