@@ -8,7 +8,8 @@ The exercise was invented by Alistair Cockburn. See [here](http://alistair.cockb
 Henrik Kniberg [description](https://docs.google.com/document/d/1TCuuu-8Mm14oxsOnlk8DqfZAA1cvtYu9WGv67Yj_sSk/pub) and [handout](https://docs.google.com/document/d/1Ls6pTmhY_LV8LwFiboUXoFXenXZl0qVZWPZ8J4uoqpI/edit).
 
 # Build
-```./mvnw clean install```
+- ```./mvnw clean install``` if you haven't already installed maven 3.3.x
+- ```mvn clean install``` if you have maven 3.3.x installed
 
 # Useful dependencies
 
