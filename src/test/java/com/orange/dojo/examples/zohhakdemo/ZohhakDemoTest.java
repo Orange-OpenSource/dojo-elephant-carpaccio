@@ -1,4 +1,4 @@
-package com.orange.dojo.elephantcarpaccio.zohhakdemo;
+package com.orange.dojo.examples.zohhakdemo;
 
 import com.googlecode.zohhak.api.TestWith;
 import com.googlecode.zohhak.api.runners.ZohhakRunner;

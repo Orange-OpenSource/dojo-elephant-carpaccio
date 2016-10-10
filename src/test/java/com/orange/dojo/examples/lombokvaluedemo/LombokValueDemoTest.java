@@ -1,4 +1,4 @@
-package com.orange.dojo.elephantcarpaccio.lombokvaluedemo;
+package com.orange.dojo.examples.lombokvaluedemo;
 /*
  * Copyright (C) 2016 Orange
  * Authors: Christophe Maldivi

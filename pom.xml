@@ -59,7 +59,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>com.orange.dojo.elephantcarpaccio.Application</mainClass>
+                            <mainClass>com.orange.dojo.elephantcarpaccio.Demo</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
