@@ -1,4 +1,9 @@
-1. Ajouter les classes d'exemples pour la lecture à la console
-2. Renommer Application en Demo et ajouter un exemple d'utilisation des classes de lecture de la console ("ton nom et ton âge")
-3. Déplacer  les exemples Lombok et Zoohak dans un package com.orange.dojo.examples (sous src/test/java)
-4. Mettre en place des tests pour valider l'environnement TU (Fest Assert failed) + Demo
+1. Refactoring ConsoleInputOutput => Terminal
+  + Renommer readFromConsole => readFromTerminal
+
+2. Refactoring dans Terminal
+  - Factoriser le scanner et l'output (PrintWriter output = new PrintWriter(System.out, true);) dans un constructeur
+  - readString => readText
+  - readDouble => readNumber +  scanner.nextDouble(); =>  scanner.nextFloat();
+  - StringInputReader => TextReader
+  - InputNumberReader => NumberReader
