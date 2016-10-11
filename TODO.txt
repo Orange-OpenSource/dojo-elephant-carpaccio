@@ -1,3 +1,5 @@
+DONE!
+
 1. Refactoring ConsoleInputOutput => Terminal
   + Renommer readFromConsole => readFromTerminal
 

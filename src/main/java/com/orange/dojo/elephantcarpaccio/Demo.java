@@ -1,20 +1,20 @@
 package com.orange.dojo.elephantcarpaccio;
 
-import com.orange.dojo.elephantcarpaccio.console.ConsoleInputOutput;
-import com.orange.dojo.elephantcarpaccio.console.InputNumberReader;
-import com.orange.dojo.elephantcarpaccio.console.StringInputReader;
+import com.orange.dojo.elephantcarpaccio.console.Terminal;
+import com.orange.dojo.elephantcarpaccio.console.NumberReader;
+import com.orange.dojo.elephantcarpaccio.console.TextReader;
 
 public class Demo {
 
   public static void main(String[] args) {
-    ConsoleInputOutput consoleInputOutput = new ConsoleInputOutput();
+    Terminal terminal = new Terminal();
 
-    InputNumberReader inputNumberReader = new InputNumberReader("Enter a number:");
-    double nb = inputNumberReader.read();
-    consoleInputOutput.display("We have read: " + nb);
+    NumberReader numberReader = new NumberReader("Enter a number:");
+    double nb = numberReader.read();
+    terminal.display("We have read: " + nb);
 
-    StringInputReader stringInputReader = new StringInputReader("Enter a text:");
-    String text = stringInputReader.read();
-    consoleInputOutput.display("We have read: " + text);
+    TextReader textReader = new TextReader("Enter a text:");
+    String text = textReader.read();
+    terminal.display("We have read: " + text);
   }
 }
