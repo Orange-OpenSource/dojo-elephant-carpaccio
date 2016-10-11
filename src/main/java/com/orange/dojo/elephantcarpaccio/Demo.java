@@ -13,7 +13,7 @@ public class Demo {
     double nb = inputNumberReader.read();
     consoleInputOutput.display("We have read: " + nb);
 
-    StringInputReader stringInputReader= new StringInputReader("Enter a text:");
+    StringInputReader stringInputReader = new StringInputReader("Enter a text:");
     String text = stringInputReader.read();
     consoleInputOutput.display("We have read: " + text);
   }

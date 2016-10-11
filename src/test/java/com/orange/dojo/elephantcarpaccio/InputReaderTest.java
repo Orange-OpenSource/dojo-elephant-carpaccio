@@ -13,27 +13,27 @@ public class InputReaderTest {
 
   @Test
   public void we_can_read_a_number_from_console() {
-    // given
+    // Given
     double expected = 2.5f;
-    InputNumberReader input =
-            new InputNumberReader("Enter number:", OptionalDouble.of(expected));
-    // when
+    InputNumberReader input = new InputNumberReader("Enter number:", OptionalDouble.of(expected));
+    
+    // When
     double readInput = input.read();
 
-    // then
+    // Then
     assertThat(readInput).isEqualTo(expected);
   }
 
   @Test
   public void we_can_read_a_string_from_console() {
-    // given
+    // Given
     String expected = "hello";
-    StringInputReader input =
-            new StringInputReader("Enter string:", Optional.of(expected));
-    // when
+    StringInputReader input = new StringInputReader("Enter string:", Optional.of(expected));
+    
+    // When
     String readInput = input.read();
 
-    // then
+    // Then
     assertThat(readInput).isEqualTo(expected);
   }
 }

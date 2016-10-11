@@ -7,9 +7,11 @@ public class EnvTest {
 
   @Test
   public void test_environment_is_working() {
-    // given
-    // when
-    // then
+    // Given
+
+    // When
+
+    // Then
     Assertions.assertThat(false).isTrue();
   }
 }

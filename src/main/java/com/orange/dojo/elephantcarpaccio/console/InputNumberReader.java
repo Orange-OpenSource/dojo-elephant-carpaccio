@@ -18,9 +18,7 @@ public class InputNumberReader {
   }
 
   public double read() {
-    return fakeValueForTestPurpose.isPresent() ?
-            fakeValueForTestPurpose.getAsDouble() :
-            readFromConsole(inputMessage);
+    return fakeValueForTestPurpose.isPresent() ? fakeValueForTestPurpose.getAsDouble() : readFromConsole(inputMessage);
   }
 
   private double readFromConsole(String inputMessage) {
@@ -31,6 +29,6 @@ public class InputNumberReader {
       } catch (InputMismatchException e) {
         consoleInputOutput.display("WARN: You entered an invalid value");
       }
-    } while(true);
+    } while (true);
   }
 }

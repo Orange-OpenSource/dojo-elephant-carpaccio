@@ -18,8 +18,6 @@ public class StringInputReader {
 
   public String read() {
     consoleInputOutput.display(inputMessage);
-    return fakeValueForTestPurpose.isPresent() ?
-            fakeValueForTestPurpose.get() :
-            consoleInputOutput.readString();
+    return fakeValueForTestPurpose.isPresent() ? fakeValueForTestPurpose.get() : consoleInputOutput.readString();
   }
 }
