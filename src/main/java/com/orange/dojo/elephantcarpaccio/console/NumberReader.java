@@ -27,7 +27,7 @@ public class NumberReader {
         terminal.display(inputMessage);
         return terminal.readNumber();
       } catch (InputMismatchException e) {
-        terminal.display("WARN: You entered an invalid value");
+        terminal.display("WARN: You entered an invalid number");
       }
     } while (true);
   }
