@@ -14,6 +14,13 @@ import org.junit.Test;
 
 import static org.fest.assertions.Assertions.assertThat;
 
+/**
+ * LOMBOK INSTALLATION: In order to use lombok with a fresh eclipse installation, you need to install Lombok first
+ * Instructions: 
+ *   1. Go to the lombak jar location and launch 'java -jar lombok-1.16.10.jar' (for lombok 1.16.10)
+ *   2. Select your 'eclipse.exe' location and click on 'install'
+ *   3. Launch eclipse then update project configuration of the needed project(s)
+ */
 public class LombokValueDemoTest {
 
   /**
@@ -39,25 +46,25 @@ public class LombokValueDemoTest {
 
   @Test
   public void two_value_objects_can_be_compared_directly_with_lombok_at_value() {
-    // given
+    // Given
     ValueObjectUser user1 = new ValueObjectUser("Jason", "Bourne");
     ValueObjectUser user2 = new ValueObjectUser("Jason", "Bourne");
     ValueObjectUser user3 = new ValueObjectUser("Pamela", "Landy");
 
-    // when
-    // then
+    // When
+    // Then
     assertThat(user1).isEqualTo(user2);
     assertThat(user1).isNotEqualTo(user3);
   }
 
   @Test
   public void two_objects_can_not_be_compared_directly() {
-    // given
+    // Given
     User user1 = new User();
     User user2 = new User();
 
-    // when
-    // then
+    // When
+    // Then
     assertThat(user1).isNotEqualTo(user2);
   }
 }
