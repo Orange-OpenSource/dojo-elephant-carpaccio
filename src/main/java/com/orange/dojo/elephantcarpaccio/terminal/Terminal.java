@@ -1,4 +1,4 @@
-package com.orange.dojo.elephantcarpaccio.console;
+package com.orange.dojo.elephantcarpaccio.terminal;
 
 import java.io.PrintWriter;
 import java.util.Scanner;
