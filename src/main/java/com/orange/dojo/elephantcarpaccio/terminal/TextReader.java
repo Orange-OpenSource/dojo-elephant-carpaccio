@@ -1,14 +1,15 @@
 package com.orange.dojo.elephantcarpaccio.terminal;
 
+import java.util.Scanner;
+
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
 public class TextReader {
-  private final String inputMessage;
-  private final Terminal terminal;
+  private final Scanner input;
 
-  public String read() {
-    terminal.display(inputMessage);
-    return terminal.readText();
+  public String readWord() {
+    return input.next();
   }
+
 }

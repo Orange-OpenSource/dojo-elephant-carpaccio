@@ -1,20 +1,20 @@
 package com.orange.dojo.elephantcarpaccio.terminal;
 
-import lombok.RequiredArgsConstructor;
-
 import java.util.InputMismatchException;
+import java.util.Scanner;
+
+import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
 public class NumberReader {
-  private final String inputMessage;
-  private final Terminal terminal;
+  private final Scanner input;
 
-  public float read() {
-    terminal.display(inputMessage);
+  public int readInteger() {
     try {
-      return terminal.readNumber();
+      return input.nextInt();
     } catch (InputMismatchException e) {
-      throw new InvalidInputException("Input value is not a number");
+      throw new InputMismatchException("Input value is not an integer");
     }
   }
+
 }

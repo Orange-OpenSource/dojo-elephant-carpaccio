@@ -4,18 +4,33 @@ import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class Terminal {
-  private final Scanner scanner = new Scanner(System.in);
-  private final PrintWriter printWriter = new PrintWriter(System.out, true);
+  private PrintWriter output = null;
+  private NumberReader numberReader= null;
+  private TextReader textReader= null;
 
+  public Terminal() {
+    this(new Scanner(System.in), new PrintWriter(System.out, true));
+  }
+  
+  Terminal(Scanner input, PrintWriter output) {
+    // To change the local 
+    //input.useLocale(Locale.US);
+    this.output = output;
+    this.numberReader = new NumberReader(input);
+    this.textReader = new TextReader(input);
+  }
+
+  public int whatIsYourAge() {
+    display("What is your age? :");
+    return numberReader.readInteger();
+  }
+
+  public String whatIsYourName() {
+    display("What is your name? :");
+    return textReader.readWord();
+  }
+  
   public void display(String message) {
-    printWriter.println(message);
-  }
-
-  String readText() {
-    return scanner.next();
-  }
-
-  float readNumber() {
-    return scanner.nextFloat();
+    output.println(message);
   }
 }
