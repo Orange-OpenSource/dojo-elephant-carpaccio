@@ -2,14 +2,14 @@ package com.orange.dojo.elephantcarpaccio.terminal;
 
 import java.util.Scanner;
 
-import lombok.RequiredArgsConstructor;
-
-@RequiredArgsConstructor
 public class TextReader {
   private final Scanner input;
+
+  public TextReader(Scanner textInputScanner) {
+    this.input = textInputScanner;
+  }
 
   public String readWord() {
     return input.next();
   }
-
 }

@@ -3,11 +3,12 @@ package com.orange.dojo.elephantcarpaccio.terminal;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import lombok.RequiredArgsConstructor;
-
-@RequiredArgsConstructor
 public class NumberReader {
   private final Scanner input;
+
+  public NumberReader(Scanner textInputScanner) {
+    this.input = textInputScanner;
+  }
 
   public int readInteger() {
     try {
