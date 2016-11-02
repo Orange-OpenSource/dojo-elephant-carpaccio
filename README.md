@@ -13,8 +13,6 @@ Henrik Kniberg [description](https://docs.google.com/document/d/1TCuuu-8Mm14oxsO
 
 # Useful dependencies
 
- -[Lombok](https://projectlombok.org/), for value object made easy
- 
  -[Zohhak - JUnit parameterized made simple](https://github.com/piotrturski/zohhak)
  
  -[Fest assert - Fluent Assertions](https://github.com/alexruiz/fest-assert-1.x)
