@@ -9,6 +9,7 @@ Henrik Kniberg [description](https://docs.google.com/document/d/1TCuuu-8Mm14oxsO
 
 # Flavours
  - See `java` directory
+ - See `python` directory
 
 # License
 Copyright (C) 2016 Orange - The MIT License
