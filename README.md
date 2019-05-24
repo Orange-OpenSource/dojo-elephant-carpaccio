@@ -19,7 +19,7 @@ Henrik Kniberg [description](https://docs.google.com/document/d/1TCuuu-8Mm14oxsO
  
 # Installation without network
 In case you do not have network access to download maven or the dependencies, you can proceed as follows:
- - the maven wrapper (`./mvnw`) is configured to "download" a local file, found in `.mvn/wrapper/apache-maven-3.6.1-bin.zip`
+ - the maven wrapper (`./mvnw`) is configured to "download" a local file, found in `.mvn/wrapper/apache-maven-3.6.1-bin.zip`. So just run `./mvnw` and it should just install maven locally in your "maven home".
  - for the java dependencies, you can unzip the `m2.zip` file and copy the `repository` content in your local `.m2/repository` directory 
 
 # License
