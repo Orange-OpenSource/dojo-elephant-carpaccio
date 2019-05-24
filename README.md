@@ -8,17 +8,19 @@ The exercise was invented by Alistair Cockburn. See [here](http://alistair.cockb
 Henrik Kniberg [description](https://docs.google.com/document/d/1TCuuu-8Mm14oxsOnlk8DqfZAA1cvtYu9WGv67Yj_sSk/pub) and [handout](https://docs.google.com/document/d/1Ls6pTmhY_LV8LwFiboUXoFXenXZl0qVZWPZ8J4uoqpI/edit).
 
 # Build
-- ```./mvnw clean install``` if you haven't already installed maven 3.3.x
-- ```mvn clean install``` if you have maven 3.3.x installed
+- ```./mvnw clean install``` if you haven't already installed maven 3
+- ```mvn clean install``` if you have maven 3 installed
 
 # Useful dependencies
 
- -[Zohhak - JUnit parameterized made simple](https://github.com/piotrturski/zohhak)
+ - [AssertJ - Fluent assertions for java](https://joel-costigliola.github.io/assertj/)
  
- -[Fest assert - Fluent Assertions](https://github.com/alexruiz/fest-assert-1.x)
+ - [Mockito - Tasty mocking framework for unit tests in Java](https://site.mockito.org/)
  
- 
-You can find examples demonstrating how to use Zohhak and Lombok @Value under the test directory.
+#Installation without network
+In case you do not have network access to download maven or the dependencies, you can proceed as follows:
+ - the maven wrapper (`./mvnw`) is configured to "download" a local file, found in `.mvn/wrapper/apache-maven-3.6.1-bin.zip`
+ - for the java dependencies, you can unzip the `m2.zip` file and copy the `repository` content in your local `.m2/repository` directory 
 
 # License
 Copyright (C) 2016 Orange - The MIT License
