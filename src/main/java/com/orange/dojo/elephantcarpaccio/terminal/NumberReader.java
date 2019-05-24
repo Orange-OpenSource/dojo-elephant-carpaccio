@@ -3,19 +3,18 @@ package com.orange.dojo.elephantcarpaccio.terminal;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class NumberReader {
+class NumberReader {
   private final Scanner input;
 
-  public NumberReader(Scanner textInputScanner) {
+  NumberReader(Scanner textInputScanner) {
     this.input = textInputScanner;
   }
 
-  public int readInteger() {
+  int readInteger() {
     try {
       return input.nextInt();
     } catch (InputMismatchException e) {
       throw new InputMismatchException("Input value is not an integer");
     }
   }
-
 }

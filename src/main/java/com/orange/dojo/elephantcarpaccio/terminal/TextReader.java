@@ -2,14 +2,14 @@ package com.orange.dojo.elephantcarpaccio.terminal;
 
 import java.util.Scanner;
 
-public class TextReader {
+class TextReader {
   private final Scanner input;
 
-  public TextReader(Scanner textInputScanner) {
+  TextReader(Scanner textInputScanner) {
     this.input = textInputScanner;
   }
 
-  public String readWord() {
+  String readWord() {
     return input.next();
   }
 }

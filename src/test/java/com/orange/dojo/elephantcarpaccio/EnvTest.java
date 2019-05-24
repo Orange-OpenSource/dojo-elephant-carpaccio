@@ -1,6 +1,6 @@
 package com.orange.dojo.elephantcarpaccio;
 
-import org.fest.assertions.Assertions;
+import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.Test;
 
 public class EnvTest {
@@ -12,6 +12,6 @@ public class EnvTest {
     // When
 
     // Then
-    Assertions.assertThat(false).isTrue();
+    assertThat(false).isTrue();
   }
 }
