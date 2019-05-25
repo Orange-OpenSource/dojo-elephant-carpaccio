@@ -17,4 +17,12 @@ class NumberReader {
       throw new InputMismatchException("Input value is not an integer");
     }
   }
+
+  public float readFloat() {
+    try {
+      return input.nextFloat();
+    } catch (InputMismatchException e) {
+      throw new InputMismatchException("Input value is not a float");
+    }
+  }
 }
