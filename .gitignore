@@ -1,6 +1,10 @@
 # Maven
 target/
 
+#gradle
+build/
+.gradle/
+
 # Eclipse configuration files/directories
 .metadata/
 .classpath
